@@ -1,0 +1,23 @@
+<Window x:Class="NotchSense.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:NotchSense"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        Topmost="True"
+        Width="74" Height="238">
+  <Border x:Name="Pill"
+          Background="#FF000000"
+          CornerRadius="20,0,0,20"
+          Padding="8"
+          SnapsToDevicePixels="True">
+    <StackPanel x:Name="RingsPanel" Orientation="Vertical" HorizontalAlignment="Center">
+      <local:RingControl x:Name="CpuRing" Metric="CPU" />
+      <local:RingControl x:Name="GpuRing" Metric="GPU" />
+      <local:RingControl x:Name="RamRing" Metric="RAM" />
+    </StackPanel>
+  </Border>
+</Window>
